@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to left,#b3ddff, #a9b1e4);
+    color: rgb(34, 34, 34);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card{
+    width: 320px;
+    height: 340px;
+    background-color: #d0e0f3;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+
+}
+.card::before{
+    content:"" ;
+    position: absolute;
+    top: 2% ;
+    width: 95%;
+    height: 120px;
+    z-index: 1;
+    border-radius: 10px 10px 0 0;
+    background-color: #9dbdee;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+    transform-origin: bottom;
+    transition: transform .4s;
+
+}
+.card:hover::before{
+    transform: translateY(-5px) scale(1.2);
+    
+}
+.card .img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    z-index: 10;
+    transform: translateY(50px);
+    border: 10px solid #b5c9f3;
+    overflow: hidden;
+    position: absolute;
+    background: #b5c9f3;
+
+}
+.card .img img{
+    width: 120%;
+    height: 120%;
+    transform: translate(-8%,-8%);
+}
+.content{
+    width: 100%;
+    height: 100%;
+    transform: translateY(170px);
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    align-items: center;
+}
+.content p{
+    margin: 0 0;
+}
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+.box{
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+.box:hover{
+    background-color: rgba(128, 128, 128, 0.89);
+}
+.btn{
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    transform: translateY(10px);
+    background-color: #9dbdee;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.137);
+    cursor: pointer;
+
+}
+.btn:hover{
+    background: rgb(24, 59, 156);
+}
